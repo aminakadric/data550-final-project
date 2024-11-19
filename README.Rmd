@@ -1,0 +1,7 @@
+This repository includes contents for the final project for __DATA550.__
+
+The directories in the repository are output, data, and code.
+
+
+Navigate to the __Makefile__ of this repository and type 'make' into 
+the terminal to generate the report.

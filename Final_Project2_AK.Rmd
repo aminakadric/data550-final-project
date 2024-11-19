@@ -1,0 +1,48 @@
+---
+title: "Final Project 2: R Markdown"
+author: "Amina Kadric"
+date: "2024-10-07"
+output: html_document
+echo: false
+---
+
+# Introduction
+
+The data include is statistics and information on the Atlanta Braves' batters between 1966 and 2023. Some of the statistics include the players' age, number of hits in a season, and number of balls hit. I plan to do a descriptive comparative analysis between years 1995 and 2021 which are the two times when the Braves won the World Series. 
+
+
+``` {r, import-data, echo = FALSE}
+here::i_am("Final_Project2_AK.Rmd")
+absolute_file_to_data <- here::here("data", "ATL_batting.csv")
+data1 <- read.csv(absolute_file_to_data, header = TRUE)
+```
+
+
+
+```{r, data-cleaning}
+
+```
+
+#Table 
+
+This table includes the mean, standard deviation, median, and number of observation for batting stats for 1999 and 2021
+
+```{r, data-tables}
+
+```
+
+
+# Graph
+
+The graph below shows the relationship between the number of games played and players' batting average.
+
+```{r, data-graph}
+library(ggplot2)
+
+data2 |>
+  group_by(games) |>
+ggplot(aes(x = games, y = batting_average)) +
+  geom_point(aes(color = year))
+```
+
+
