@@ -1,48 +1,65 @@
 ---
-title: "Final Project 2: R Markdown"
+title: "Final Project: Atlanta Braves World Series Stats - 1995 and 2021"
 author: "Amina Kadric"
-date: "2024-10-07"
-output: html_document
-echo: false
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+  toc: TRUE
+  echo: FALSE
 ---
+
+```{r, packages}
+library(knitr)
+```
 
 # Introduction
 
-The data include is statistics and information on the Atlanta Braves' batters between 1966 and 2023. Some of the statistics include the players' age, number of hits in a season, and number of balls hit. I plan to do a descriptive comparative analysis between years 1995 and 2021 which are the two times when the Braves won the World Series. 
+The data include is statistics and information on the Atlanta Braves' batters between 1966 and 2023. Some of the statistics include the players' age, number of hits in a season, and number of balls hit. This report aims to compare players' stats between the 1995 and 2021
+which are the two years the Atlanta Braves won the World Series.
 
 
-``` {r, import-data, echo = FALSE}
+```{r, report-location}
 here::i_am("Final_Project2_AK.Rmd")
-absolute_file_to_data <- here::here("data", "ATL_batting.csv")
-data1 <- read.csv(absolute_file_to_data, header = TRUE)
 ```
-
 
 
 ```{r, data-cleaning}
+here::i_am("Final_Project2_AK.Rmd")
+
+clean_data <- readRDS(
+  file = here::here("output/cleaned_batting_no_pitchers.rds")
+)
 
 ```
 
-#Table 
 
-This table includes the mean, standard deviation, median, and number of observation for batting stats for 1999 and 2021
+#Tablular Analysis
+
+This table includes the mean, standard deviation, median, and number of observation for batting stats for 1995 and 2021. Variables of focus are 
 
 ```{r, data-tables}
+here::i_am("Final_Project2_AK.Rmd")
 
+descriptive_table <- readRDS(
+  file = here::here("output/descriptive_table.rds")
+)
+
+descriptive_table
 ```
 
 
-# Graph
+# Box Plot
 
-The graph below shows the relationship between the number of games played and players' batting average.
+The figure below represents the distribution of player's batting average between 1995 and 2021. The boxplots for each year is stratified between dominant hand.
 
-```{r, data-graph}
-library(ggplot2)
+```{r, boxplot_batting_average}
 
-data2 |>
-  group_by(games) |>
-ggplot(aes(x = games, y = batting_average)) +
-  geom_point(aes(color = year))
+#| fig.align = "center",
+#| out.width = "700px"
+
+knitr::include_graphics(
+  here::here("output/box_plot.png")
+)
 ```
 
 

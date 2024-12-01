@@ -1,7 +1,24 @@
+# Final Project
+
 This repository includes contents for the final project for __DATA550.__
 
+## Introduction
+
+The data set contains stats from the players of the Atlanta Braves baseball 
+team ranging from 1966 to 2023. This includes their age, position played, number
+of ball hits, home runs, and dominant hand. For this project, we are interested
+in years 1995 and 2021 which are the years the Braves won the World Series. In 
+particular, this repository aims to compare the batting stats between the two years.
+Variables of focus include batting average, stolen bases, home runs, number of 
+games played, and dominant hand.
+
+## Code Structure
 The directories in the repository are output, data, and code.
 
+### 
 
 Navigate to the __Makefile__ of this repository and type 'make' into 
 the terminal to generate the report.
+
+
+
