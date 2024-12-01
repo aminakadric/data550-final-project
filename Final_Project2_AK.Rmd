@@ -5,7 +5,6 @@ date: "`r Sys.Date()`"
 output: 
   html_document:
   toc: TRUE
-  echo: FALSE
 ---
 
 ```{r, packages, echo=FALSE}
@@ -35,11 +34,9 @@ clean_data <- readRDS(
 
 # Tablular Analysis
 
-This table includes the mean, standard deviation, median, and number of observation for batting stats for 1995 and 2021. Variables of focus are 
+This table includes the mean, standard deviation, median, and number of observation for batting stats for 1995 and 2021.
 
-```{r, data-tables, include=FALSE}
-here::i_am("Final_Project2_AK.Rmd")
-
+```{r, data-tables, echo = FALSE}
 descriptive_table <- readRDS(
   file = here::here("output/descriptive_table.rds")
 )
@@ -52,7 +49,7 @@ descriptive_table
 
 The figure below represents the distribution of player's batting average between 1995 and 2021. The box plots for each year is stratified between dominant hand.
 
-```{r, boxplot_batting_average}
+```{r, boxplot_batting_average, echo=FALSE}
 
 #| fig.align = "center",
 #| out.width = "700px"
