@@ -8,7 +8,7 @@ output:
   echo: FALSE
 ---
 
-```{r, packages}
+```{r, packages, echo=FALSE}
 library(knitr)
 ```
 
@@ -18,12 +18,12 @@ The data include is statistics and information on the Atlanta Braves' batters be
 which are the two years the Atlanta Braves won the World Series.
 
 
-```{r, report-location}
+```{r, report-location, include=FALSE}
 here::i_am("Final_Project2_AK.Rmd")
 ```
 
 
-```{r, data-cleaning}
+```{r, data-cleaning, include=FALSE}
 here::i_am("Final_Project2_AK.Rmd")
 
 clean_data <- readRDS(
@@ -33,11 +33,11 @@ clean_data <- readRDS(
 ```
 
 
-#Tablular Analysis
+# Tablular Analysis
 
 This table includes the mean, standard deviation, median, and number of observation for batting stats for 1995 and 2021. Variables of focus are 
 
-```{r, data-tables}
+```{r, data-tables, include=FALSE}
 here::i_am("Final_Project2_AK.Rmd")
 
 descriptive_table <- readRDS(
@@ -50,7 +50,7 @@ descriptive_table
 
 # Box Plot
 
-The figure below represents the distribution of player's batting average between 1995 and 2021. The boxplots for each year is stratified between dominant hand.
+The figure below represents the distribution of player's batting average between 1995 and 2021. The box plots for each year is stratified between dominant hand.
 
 ```{r, boxplot_batting_average}
 
