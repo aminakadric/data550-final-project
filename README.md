@@ -1,4 +1,4 @@
-# Final Project
+# Final Project (click "Preview" to view as an html document)
 
 This repository includes contents for the final project for __DATA550.__
 
@@ -28,12 +28,32 @@ graph.R contains code to create a box block.
 
 render.R will be used to render the final html report.
 
+Lastly, the Makefile pulls all these R scripts together to build the report automatically
+using the Dockerfile
 
-# How to generate the report
+# How to build the docker image in the terminal:
 
-Ensure that you have navigated to the proper folder in your console and terminal.
+In the terminal, type `r docker build -t project_image .`
 
 
+# Link to Docker image from DockerHub:
+
+In your web browser, navigate to this following link:
+https://hub.docker.com/repository/docker/aminakadric/project_image/general
+
+
+Once you are in the container, run `r make` in the terminal to generate the report.
+Navigate to the final_report folder to find the html file.
+
+# How to generate the report automatically:
+
+Ensure that you have navigated to the proper folder in your console and terminal
+using `r pwd` in the terminal and `r getwd()` and `r setwd()` in the the console.
+
+In the terminal, type `r make final_report/Final_Project2_AK.html` and press enter.
+
+To view the report, navigate to the final_report folder where the Final_Project2_AK.html
+should be located. Click this file to view in browser.
 
 
 
