@@ -47,6 +47,17 @@ https://hub.docker.com/repository/docker/aminakadric/project_image/general
 Ensure that you have navigated to the proper folder in your console and terminal
 using `pwd` in the terminal and `getwd()` and `setwd()` in the the console.
 
+## Mounting your Directory
+
+Navigate to the bottom of the Makefile where it says */$$(pwd)/final_report:/final_project/final_report project_image*
+
+If your local file path to the final_project directory contains spaces. Quotation marks
+must be placed at the beginning and before the colon:
+
+*"/$$(pwd)/final_report:"/final_project/final_report project_image*
+
+# Using make to generate the final report 
+
 In the terminal, type `make final_report/Final_Project2_AK.html` and press enter.
 
 To view the report, navigate to the final_report folder where the Final_Project2_AK.html
