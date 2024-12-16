@@ -42,9 +42,6 @@ In your web browser, navigate to this following link:
 https://hub.docker.com/repository/docker/aminakadric/project_image/general
 
 
-Once you are in the container, run `r make` in the terminal to generate the report.
-Navigate to the final_report folder to find the html file.
-
 # How to generate the report automatically:
 
 Ensure that you have navigated to the proper folder in your console and terminal
