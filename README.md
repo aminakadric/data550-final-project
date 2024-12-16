@@ -45,9 +45,9 @@ https://hub.docker.com/repository/docker/aminakadric/project_image/general
 # How to generate the report automatically:
 
 Ensure that you have navigated to the proper folder in your console and terminal
-using `r pwd` in the terminal and `r getwd()` and `r setwd()` in the the console.
+using `pwd` in the terminal and `getwd()` and `setwd()` in the the console.
 
-In the terminal, type `r make final_report/Final_Project2_AK.html` and press enter.
+In the terminal, type `make final_report/Final_Project2_AK.html` and press enter.
 
 To view the report, navigate to the final_report folder where the Final_Project2_AK.html
 should be located. Click this file to view in browser.
