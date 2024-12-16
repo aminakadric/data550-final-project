@@ -33,7 +33,7 @@ using the Dockerfile
 
 # How to build the docker image in the terminal:
 
-In the terminal, type `r docker build -t project_image .`
+In the terminal, type `docker build -t project_image .`
 
 
 # Link to Docker image from DockerHub:
