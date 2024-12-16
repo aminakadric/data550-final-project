@@ -33,10 +33,7 @@ render.R will be used to render the final html report.
 
 Ensure that you have navigated to the proper folder in your console and terminal.
 
-Navigate to the __Makefile__ of this repository and type `r install` into 
-the terminal or `r renv::restore()` into the console. This action will allow you to download or synchoronize any necessary packages to run the report.
 
-Next, type and run `r make` into the terminal to generate the report. In the main repository, there should be a file ending in .htlm which is where the final rendered report should be.
 
 
 

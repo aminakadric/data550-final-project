@@ -1,0 +1,80 @@
+]0;~[?2004hrstudio@0c41c09aa0fd:~$ [Krstudio@0c41c09aa0fd:~$ make
+[?2004lMakefile:49: warning: overriding recipe for target 'final_report.html'
+Makefile:4: warning: ignoring old recipe for target 'final_report.html'
+docker build -t final6 .
+make: docker: No such file or directory
+make: *** [Makefile:42: final_project_image] Error 127
+]0;~[?2004hrstudio@0c41c09aa0fd:~$ make
+[?2004lMakefile:49: warning: overriding recipe for target 'final_report.html'
+Makefile:4: warning: ignoring old recipe for target 'final_report.html'
+docker build -t final6 .
+make: docker: No such file or directory
+make: *** [Makefile:42: final_project_image] Error 127
+]0;~[?2004hrstudio@0c41c09aa0fd:~$ [Krstudio@0c41c09aa0fd:~$ [?2004l[?2004h[?2004l
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ mk[Kake
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make install
+[?2004lmake: Nothing to be done for 'install'.
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ make install[K
+[?2004lRscript code/render.R
+- One or more packages recorded in the lockfile are not installed.
+- Use `]8;;ide:run:renv::status()renv::status()]8;;` for more details.
+Error in loadNamespace(x) : there is no package called ‘here’
+Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+make: *** [Makefile:4: final_report.html] Error 1
+]0;~[?2004hrstudio@5f7d25cb23f5:~$ [?2004l[?2004h[?2004l

@@ -1,3 +1,5 @@
+# REPORT-ASSOCIATED RULES
+
 final_report.html: code/render.R data descriptive_table box_plot
 	Rscript code/render.R
 
@@ -24,7 +26,28 @@ box_plot: output/box_plot.png
 clean:
 	rm -f output/*.rds output/*.png
 	rm -f *.html *.pdf
+	rm -f final_report/*.html
 	
 .PHONY: install
 install:
-Rscript -e "renv::restore(prompt = FALSE)"
+	Rscript -e "renv::restore(prompt = FALSE)"
+
+
+# DOCKER-ASSOCIATED RULES
+
+# building the report image
+PROJECTFILES = code/render.R data descriptive_table box_plot code/data_clean.R \
+  Makefile Final_Project2_AK.Rmd
+
+project_image: Dockerfile $(PROJECTFILES)
+	docker build -t project_image .
+	touch $@
+
+
+# building the report automatically
+final_report/Final_Project2_AK.html: project_image
+	docker run -v /$$(pwd)/final_report:/final_project/final_report project_image
+
+
+
+

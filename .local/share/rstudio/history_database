@@ -1,0 +1,516 @@
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical",
+0:position ~ "categorical"),
+0:label  = list(batting_average  ~ "Batting Average",
+0:home_runs ~ "Home Runs",
+0:stolen_bases ~ "Stolen Bases",
+0:games  ~ "Games Played",
+0:dominant_hand ~ "Dominant Hand",
+0:position ~ "Position Played")
+0:) |>
+0:modify_header(
+0:label = "**Variable**",
+0:all_stat_cols() ~ "**{level}**<br>N = {n} ({style_percent(p, digits=1)}%)"
+0:) |>
+0:modify_caption("Atlanta Player Batting Statistics for 1995 and 2021") %>%
+0:bold_labels()  |>
+0:add_overall(
+0:last = FALSE,
+0:col_label = "**Both 1995 and 2021**<br>N = {N}"
+0:)
+0:batting_table_stat
+0:batting_table_stat <- cleaned_descriptive |>
+0:select(-name, position)
+0:batting_table_stat <- cleaned_descriptive |>
+0:select(-name, position) |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical"),
+0:label  = list(batting_average  ~ "Batting Average",
+0:home_runs ~ "Home Runs",
+0:stolen_bases ~ "Stolen Bases",
+0:games  ~ "Games Played",
+0:dominant_hand ~ "Dominant Hand")
+0:) |>
+0:modify_header(
+0:label = "**Variable**",
+0:all_stat_cols() ~ "**{level}**<br>N = {n} ({style_percent(p, digits=1)}%)"
+0:) |>
+0:modify_caption("Atlanta Player Batting Statistics for 1995 and 2021") %>%
+0:bold_labels()  |>
+0:add_overall(
+0:last = FALSE,
+0:col_label = "**Both 1995 and 2021**<br>N = {N}"
+0:)
+0:batting_table_stat
+0:batting_table_stat <- cleaned_descriptive |>
+0:select(-name, -position) |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical"),
+0:label  = list(batting_average  ~ "Batting Average",
+0:home_runs ~ "Home Runs",
+0:stolen_bases ~ "Stolen Bases",
+0:games  ~ "Games Played",
+0:dominant_hand ~ "Dominant Hand")
+0:) |>
+0:modify_header(
+0:label = "**Variable**",
+0:all_stat_cols() ~ "**{level}**<br>N = {n} ({style_percent(p, digits=1)}%)"
+0:) |>
+0:modify_caption("Atlanta Player Batting Statistics for 1995 and 2021") %>%
+0:bold_labels()  |>
+0:add_overall(
+0:last = FALSE,
+0:col_label = "**Both 1995 and 2021**<br>N = {N}"
+0:)
+0:batting_table_stat
+0:remove_name_and_positions <- cleaned_descriptive |>
+0:select(-name, -position)
+0:cleaned_descriptive <- readRDS(
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:remove_name_and_positions <- cleaned_descriptive |>
+0:select(-name, -position)
+0:table_statistics <- remove_name_and_positions |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical")
+0:)
+0:table_labels <- table_statistics |>
+0:label  = list(batting_average  ~ "Batting Average",
+0:home_runs ~ "Home Runs",
+0:stolen_bases ~ "Stolen Bases",
+0:games  ~ "Games Played",
+0:dominant_hand ~ "Dominant Hand")
+0:table_statistics <- remove_name_and_positions |>
+0:table_statistics <- remove_name_and_positions |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical") |>
+0:table_labels <- table_statistics |>
+0:label  = list(batting_average  ~ "Batting Average",
+0:table_statistics <- remove_name_and_positions |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical") |>
+0:table_labels <- table_statistics |>
+0:label  = list(batting_average  ~ "Batting Average",
+0:batting_table_stat <- table_labels |>
+0:modify_header(
+0:label = "**Variable**",
+0:all_stat_cols() ~ "**{level}**<br>N = {n} ({style_percent(p, digits=1)}%)"
+0:) |>
+0:modify_caption("Atlanta Player Batting Statistics for 1995 and 2021") %>%
+0:bold_labels()  |>
+0:add_overall(
+0:last = FALSE,
+0:col_label = "**1995 and 2021**<br>N = {N}"
+0:)
+0:batting_table_stat <- table_statistics |>
+0:modify_header(
+0:label = "**Variable**",
+0:all_stat_cols() ~ "**{level}**<br>N = {n} ({style_percent(p, digits=1)}%)"
+0:) |>
+0:modify_caption("Atlanta Player Batting Statistics for 1995 and 2021") %>%
+0:bold_labels()  |>
+0:add_overall(
+0:last = FALSE,
+0:col_label = "**1995 and 2021**<br>N = {N}"
+0:)
+0:batting_table_stat
+0:table_statistics <- remove_name_and_positions |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical") |>
+0:table_labels <- table_statistics |>
+0:label  = list(batting_average  ~ "Batting Average",
+0:table_statistics <- remove_name_and_positions |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical") |>
+0:label  = list(batting_average  ~ "Batting Average",
+0:table_statistics <- remove_name_and_positions |>
+0:tbl_summary(
+0:by = year,
+0:statistic = list(all_categorical() ~ "{n}    ({p}%)",
+0:all_continuous()  ~ "{median} ({p25}, {p75})"),
+0:digits = list(all_continuous()  ~ c(2, 2),
+0:all_categorical() ~ c(0, 1)),
+0:type = list(batting_average  ~ "continuous",
+0:stolen_bases ~ "continuous",
+0:home_runs   ~ "continuous",
+0:games ~ "continuous",
+0:dominant_hand ~ "categorical"),
+0:label  = list(batting_average  ~ "Batting Average",
+0:home_runs ~ "Home Runs",
+0:stolen_bases ~ "Stolen Bases",
+0:games  ~ "Games Played",
+0:dominant_hand ~ "Dominant Hand")
+0:)
+0:batting_table_stat <- table_statistics |>
+0:modify_header(
+0:label = "**Variable**",
+0:all_stat_cols() ~ "**{level}**<br>N = {n} ({style_percent(p, digits=1)}%)"
+0:) |>
+0:modify_caption("Atlanta Player Batting Statistics for 1995 and 2021") %>%
+0:bold_labels()  |>
+0:add_overall(
+0:last = FALSE,
+0:col_label = "**1995 and 2021**<br>N = {N}"
+0:)
+0:batting_table_stat
+0:saveRDS(
+0:batting_table_stat,
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:saveRDS(
+0:data_clean,
+0:file = here::here("output", "cleaned_data_descriptive.rds")
+0:)
+0:library(dplyr)
+0:library(janitor)
+0:here::i_am(
+0:"code/data_clean.R"
+0:)
+0:library(readr)
+0:ATL_batting <- read_csv("data/ATL_batting.csv")
+0:View(ATL_batting)
+0:braves_batting_1995_2021 <- ATL_batting |>
+0:clean_names(case = "snake") |>
+0:filter(year == 2021 | year == 1995) |>
+0:select("name", "year", "batting_average", "stolen_bases",
+0:"home_runs", "games", "dominant_hand", "position")
+0:batting_no_pitchers <- braves_batting_1995_2021 |>
+0:filter(position !="P")
+0:saveRDS(
+0:batting_no_pitchers,
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:saveRDS(
+0:data_clean,
+0:file = here::here("output", "cleaned_data_descriptive.rds")
+0:)
+0:.libPaths()
+0:getwd()
+0:setwd("~")
+0:getwd()
+0:setwd("~/data550/final_project")
+0:getwd()
+0:.libPaths()
+0:renv::load()
+0:.libPaths()
+0:getwd()
+0:getwd()
+0:.libPaths()
+0:renv::activate()
+0:.libPaths()
+0:renv::status()
+0:renv::init()
+0:.libPaths()
+0:renv::status()
+0:here::i_am("Final_Project2_AK.Rmd")
+0:here::i_am("Final_Project2_AK.Rmd")
+0:data <- readRDS(
+0:file = here::here ("data/ATL_batting.csv")
+0:)
+0:data <- readRDS(
+0:file = here::here ("data/ATL_batting.csv")
+0:)
+0:data <- here::here ("data/ATL_batting.csv")
+0:)
+0:here::i_am("Final_Project2_AK.Rmd")
+0:data <- here::here ("data/ATL_batting.csv")
+0:)
+0:here::i_am("Final_Project2_AK.Rmd")
+0:clean_data <- readRDS(
+0:file = here::here(output/cleaned_batting_no_pitchers.rds)
+0:)
+0:here::i_am("Final_Project2_AK.Rmd")
+0:clean_data <- readRDS(
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:here::i_am("Final_Project2_AK.Rmd")
+0:clean_data <- readRDS(
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:here::i_am("Final_Project2_AK.Rmd")
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:library(dplyr)
+0:library(gtsummary)
+0:here::i_am(
+0:"code/updated_descriptive_table.R"
+0:)
+0:cleaned_descriptive <- readRDS(
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:library(dplyr)
+0:library(ggplot2)
+0:here::i_am(
+0:"code/graph.R"
+0:)
+0:cleaned_descriptive <- readRDS(
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:data2 |>
+0:group_by(games) |>
+0:ggplot(aes(x = games, y = batting_average)) +
+0:geom_point(aes(color = year))
+0:data2 <- cleaned_descriptive
+0:View(clean_data)
+0:data2 <- cleaned_descriptive_data
+0:data2 <- cleaned_descriptive_data
+0:cleaned_descriptive_data <- readRDS(
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:data2 <- cleaned_descriptive_data
+0:View(data2)
+0:data2 <- cleaned_descriptive_data |>
+0:group_by(dominant_hand) |>
+0:ggplot(aes(x = games, y = batting_average)) +
+0:geom_point(aes(color = year))
+0:View(data2)
+0:library(ggplot2)
+0:View(data2)
+0:?ggplot2
+0:library(tidyverse)
+0:install.packages(tidyverse)
+0:install.packages("tidyverse")
+0:library(dplyr)
+0:library(ggplot2)
+0:library(tidyverse)
+0:here::i_am(
+0:"code/graph.R"
+0:)
+0:cleaned_descriptive_data <- readRDS(
+0:file = here::here("output/cleaned_batting_no_pitchers.rds")
+0:)
+0:data2 <- cleaned_descriptive_data |>
+0:group_by(dominant_hand) |>
+0:ggplot(aes(x = games, y = batting_average)) +
+0:geom_point(aes(color = year))
+0:View(data2)
+0:View(data2)
+0:data_groupby_dominant_hand <- cleaned_descriptive_data |>
+0:group_by(dominant_hand)
+0:ggplot(data = data_groupby_dominant_hand)
+0:ggplot(aes(x = games, y = batting_average)) +
+0:geom_point(aes(color = year))
+0:ggplot(data = data_groupby_dominant_hand) +
+0:ggplot(aes(x = games, y = batting_average)) +
+0:geom_point(aes(color = year))
+0:data_groupby_dominant_hand <- cleaned_descriptive_data |>
+0:group_by(dominant_hand)
+0:View(data_groupby_dominant_hand)
+0:ggplot(data = data_groupby_dominant_hand)
+0:ggplot(data = data_groupby_dominant_hand),
+0:r_l_plot <- data_groupby_dominant_hand |>
+0:ggplot(aes(x = games, y = batting_average)) +
+0:geom_point(aes(color = year))
+0:View(r_l_plot)
+0:batting_average_year <-
+0:ggplot(aes(x = games, y = batting_average)) +
+0:geom_boxplot()
+0:batting_average_year <-
+0:ggplot(data_groupby_year, aes(x = games, y = batting_average)) +
+0:geom_boxplot()
+0:data_groupby_year <- cleaned_descriptive_data |>
+0:group_by(year)
+0:batting_average_year <-
+0:ggplot(data_groupby_year, aes(x = games, y = batting_average)) +
+0:geom_boxplot()
+0:View(batting_average_year)
+0:data_groupby_year <- cleaned_descriptive_data
+0:batting_average_year <-
+0:ggplot(data_groupby_year, aes(x = games, y = batting_average)) +
+0:geom_boxplot()
+0:View(batting_average_year)
+0:batting_average_year <-
+0:ggplot(data_groupby_year, aes(x = year, y = batting_average)) +
+0:geom_boxplot()
+0:ggplot(data_groupby_year, aes(x = year, y = batting_average)) +
+0:geom_boxplot()
+0:ggplot(data_groupby_year, aes(x = year, y = batting_average)) +
+0:geom_boxplot()
+0:ggplot(data_groupby_year, aes(x = year, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year)
+0:ggplot(data_groupby_year, aes(y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year)
+0:ggplot(data_groupby_year, aes(x= batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year)
+0:ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year)
+0:ggplot(data_groupby_year, aes(x= "Dominant Hand" = dominant_hand, y = batting_average)) +
+0:ggplot(data_groupby_year, aes(x= "Dominant Hand" ~ dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year)
+0:ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year) +
+0:stat_summary(fun.y = mean)
+0:ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year) +
+0:stat_summary(fun.y = mean, geom="point", shape=20, size=14,
+0:color="red", fill="red")
+0:ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year) +
+0:stat_summary(fun.y = mean, geom="point", shape=20, size=5,
+0:color="red", fill="red")
+0:ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year) +
+0:stat_summary(fun.y = mean, geom="point", shape=20, size=5,
+0:color="red", fill="red") +
+0:scale_fill_brewer(palette="Set1")
+0:ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year) +
+0:stat_summary(fun.y = mean, geom="point", shape=20, size=5,
+0:color="red", fill="red") +
+0:scale_fill_brewer(palette="Set1") +
+0:labs(y = "Battining Average", x = "Dominant Hand (R/L)")
+0:box_plot <- ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year) +
+0:stat_summary(fun.y = mean, geom="point", shape=20, size=5,
+0:color="red", fill="red") +
+0:scale_fill_brewer(palette="Set1") +
+0:labs(y = "Battining Average", x = "Dominant Hand (R/L)")
+0:ggsave(
+0:here::here("output/box_plot.png")
+0:plot = box_plot,
+0:ggsave(
+0:here::here("output/box_plot.png"),
+0:plot = box_plot,
+0:device = png
+0:)
+0:library(knitr)
+0:#| fig.align = "center",
+0:#| out.width = "700px"
+0:knitr::include_graphics(
+0:here::here("output/box_plot.png")
+0:)
+0:here::i_am("Final_Project2_AK.Rmd")
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:descriptive_table
+0:box_plot <- ggplot(data_groupby_year, aes(x= dominant_hand, y = batting_average)) +
+0:geom_boxplot() +
+0:facet_wrap(~year) +
+0:stat_summary(fun = mean, geom="point", shape=20, size=5,
+0:color="red", fill="red") +
+0:scale_fill_brewer(palette="Set1") +
+0:labs(y = "Battining Average", x = "Dominant Hand (R/L)")
+0:box_plot
+0:ggsave(
+0:here::here("output/box_plot.png"),
+0:plot = box_plot,
+0:device = png
+0:)
+0:renv::status()
+0:renv::status()
+0:renv::snapshot()
+0:here::i_am("Final_Project2_AK.Rmd")
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:descriptive_table
+0:here::i_am("Final_Project2_AK.Rmd")
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:descriptive_table
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:here::i_am("Final_Project2_AK.Rmd")
+0:descriptive_table <- readRDS(
+0:file = here::here("output/descriptive_table.rds")
+0:)
+0:renv::snapshot()
+0:renv::install()
+0:# Final Project
+0:This repository includes contents for the final project for __DATA550.__
+0:# Final Project
+0:This repository includes contents for the final project for __DATA550.__
+0:## Introduction
+0:The data set contains stats from the players of the Atlanta Braves baseball
+1734048075184:renv::restore()
+1734048108082:renv::status()
+1734048167379:renv::status()
+1734048186074:renv::restore()

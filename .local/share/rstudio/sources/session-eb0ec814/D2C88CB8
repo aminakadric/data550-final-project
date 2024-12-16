@@ -1,0 +1,26 @@
+{
+    "id": "D2C88CB8",
+    "path": "~/Dockerfile",
+    "project_path": null,
+    "type": "dockerfile",
+    "hash": "770011294",
+    "contents": "",
+    "dirty": false,
+    "created": 1734048121541.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "8,0",
+        "scrollLine": "6"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1734048898,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1734048898209,
+    "read_only": false,
+    "read_only_alternatives": []
+}

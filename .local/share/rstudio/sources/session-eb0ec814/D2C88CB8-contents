@@ -1,0 +1,37 @@
+FROM rocker/rstudio
+
+RUN Rscript -e "install.packages('here')"
+RUN Rscript -e "install.packages('yaml')"
+RUN Rscript -e "install.packages('tidyverse')"
+RUN Rscript -e "install.packages('rmarkdown')"
+RUN Rscript -e "install.packages('gtsummary')"
+RUN Rscript -e "install.packages('janitor')"
+
+
+RUN apt-get update && apt-get install -y pandoc
+RUN apt-get install -y vim
+
+RUN mkdir /final_project
+WORKDIR /final_project
+COPY README.md .
+COPY Makefile .
+COPY Dockerfile .
+COPY Final_Project2_AK.Rmd .
+COPY .gitignore .
+COPY bootleg.lock .
+
+
+COPY data data
+COPY code code
+
+
+RUN mkdir output
+
+
+
+
+
+
+
+
+
